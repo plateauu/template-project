@@ -26,6 +26,8 @@ repositories {
 ext {
 	springCloudVersion = 'Dalston.SR4'
 	vaadinVersion = '8.1.0'
+    spockFramework = '1.1-groovy-2.4'
+    groovyVersion = '2.4.12'
 }
 
 dependencies {
@@ -41,6 +43,11 @@ dependencies {
 //	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("org.spockframework:spock-core:${spockFramework}")
+    testCompile("org.spockframework:spock-spring:${spockFramework}")
+    testCompile ("org.codehaus.groovy:groovy-all:${groovyVersion}")
+
+
 //	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
 //	testCompile('org.springframework.security:spring-security-test')
 }

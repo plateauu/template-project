@@ -26,8 +26,9 @@ repositories {
 ext {
 	springCloudVersion = 'Dalston.SR4'
 	vaadinVersion = '8.1.0'
-    spockFramework = '1.1-groovy-2.4'
+    spockFrameworkVersion = '1.1-groovy-2.4'
     groovyVersion = '2.4.12'
+    guavaVersion = '23.4-jre'
 }
 
 dependencies {
@@ -40,11 +41,13 @@ dependencies {
 //	compile('org.springframework.boot:spring-boot-starter-security')
 //	compile('com.vaadin:vaadin-spring-boot-starter')
 	compile('org.springframework.boot:spring-boot-starter-web')
+    compile ("com.google.guava:guava:${guavaVersion}")
+
 //	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile("org.spockframework:spock-core:${spockFramework}")
-    testCompile("org.spockframework:spock-spring:${spockFramework}")
+    testCompile("org.spockframework:spock-core:${spockFrameworkVersion}")
+    testCompile("org.spockframework:spock-spring:${spockFrameworkVersion}")
     testCompile ("org.codehaus.groovy:groovy-all:${groovyVersion}")
 
 

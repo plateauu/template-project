@@ -1,9 +1,11 @@
-package tech.plateauu.shrotener;
+package tech.plateauu.shrotener.model;
 
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
+import tech.plateauu.shrotener.utils.LocalDateTimeDeserializer;
+import tech.plateauu.shrotener.utils.LocalDateTimeSerializer;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +13,7 @@ import java.time.LocalDateTime;
  * Model entity
  */
 @Data
-class Url {
+public class Url {
 
     private final long id;
     private final String shortUrl;

@@ -1,4 +1,4 @@
-package tech.plateauu.shrotener;
+package tech.plateauu.shrotener.utils;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 /**
  * Utility class LocalDateTime deserializer for jackson mapper
  */
-class LocalDateTimeDeserializer extends JsonDeserializer {
+public class LocalDateTimeDeserializer extends JsonDeserializer {
 
     @Override
     public LocalDateTime deserialize(JsonParser parser, DeserializationContext ctx) throws IOException {

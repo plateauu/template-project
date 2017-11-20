@@ -1,4 +1,4 @@
-package tech.plateauu.shrotener;
+package tech.plateauu.shrotener.utils;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 /**
  * Utility class LocalDateTime serializer for jackson mapper
  */
-class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
+public class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
 
     @Override
     public void serialize(LocalDateTime dateTime, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {

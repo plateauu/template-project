@@ -1,11 +1,11 @@
-package tech.plateauu.shrotener.model;
+package tech.plateauu.shortener.model;
 
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
-import tech.plateauu.shrotener.utils.LocalDateTimeDeserializer;
-import tech.plateauu.shrotener.utils.LocalDateTimeSerializer;
+import tech.plateauu.shortener.utils.LocalDateTimeDeserializer;
+import tech.plateauu.shortener.utils.LocalDateTimeSerializer;
 
 import java.time.LocalDateTime;
 

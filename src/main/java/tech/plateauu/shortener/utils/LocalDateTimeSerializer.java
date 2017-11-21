@@ -1,4 +1,4 @@
-package tech.plateauu.shrotener.utils;
+package tech.plateauu.shortener.utils;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

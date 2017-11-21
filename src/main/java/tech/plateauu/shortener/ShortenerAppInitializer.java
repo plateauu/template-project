@@ -1,4 +1,4 @@
-package tech.plateauu.shrotener;
+package tech.plateauu.shortener;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

@@ -1,4 +1,4 @@
-package tech.plateauu.shrotener.utils;
+package tech.plateauu.shortener.utils;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

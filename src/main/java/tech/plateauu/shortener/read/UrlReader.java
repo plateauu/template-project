@@ -1,9 +1,9 @@
-package tech.plateauu.shrotener.read;
+package tech.plateauu.shortener.read;
 
 import com.google.common.collect.Sets;
 import org.springframework.stereotype.Service;
-import tech.plateauu.shrotener.model.Url;
-import tech.plateauu.shrotener.utils.MockImplementation;
+import tech.plateauu.shortener.model.Url;
+import tech.plateauu.shortener.utils.MockImplementation;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -11,8 +11,8 @@ import java.util.Set;
 /**
  * Reader URL object component. Mock implementation
  */
-@Service
 @MockImplementation
+@Service
 class UrlReader {
 
     private final LocalDateTime NOW = LocalDateTime.now();

@@ -1,9 +1,9 @@
-package tech.plateauu.shrotener.write;
+package tech.plateauu.shortener.write;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import tech.plateauu.shrotener.model.Url;
-import tech.plateauu.shrotener.utils.MockImplementation;
+import tech.plateauu.shortener.model.Url;
+import tech.plateauu.shortener.utils.MockImplementation;
 
 /**
  * Controller responsible for add new Urls

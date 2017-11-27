@@ -35,14 +35,15 @@ dependencies {
     compile('org.springframework.boot:spring-boot-actuator-docs')
 //	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
 //	compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
 //	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 //	compile('org.springframework.boot:spring-boot-starter-security')
 //	compile('com.vaadin:vaadin-spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("com.google.guava:guava:${guavaVersion}")
+    compile('org.springframework.boot:spring-boot-configuration-processor')
 
-	runtime('com.h2database:h2')
+    runtime('com.h2database:h2')
     compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("org.spockframework:spock-core:${spockFrameworkVersion}") {
@@ -61,6 +62,7 @@ dependencies {
 //    }
 //}
 
+compileJava.dependsOn(processResources)
 compileJava {
     doLast {
         file("${projectDir}/src/main/groovy").deleteDir()
@@ -70,7 +72,7 @@ compileJava {
 project.buildDir = 'build'
 
 sourceSets {
-    main{
+    main {
         java {
             srcDir 'src/main/java'
         }
@@ -82,13 +84,13 @@ sourceSets {
         groovy {
             srcDir 'src/test/groovy'
         }
-        resources{
+        resources {
             srcDir 'src/test/resources'
         }
     }
 }
 
-task checkSource{
+task checkSource {
     println "src ${sourceSets}"
     println "src ${sourceSets.namer}"
     println "src ${sourceSets.asMap}"

@@ -3,8 +3,7 @@ package tech.plateauu.shortener.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import tech.plateauu.shortener.utils.LocalDateTimeDeserializer;
 import tech.plateauu.shortener.utils.LocalDateTimeSerializer;
 
@@ -18,23 +17,25 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Data
-@EqualsAndHashCode
-public class Url {
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+@AllArgsConstructor
+public class Url extends BaseEntity{
 
-    @GeneratedValue
-    @Id
-    private final long id;
+    private String shortUrl;
 
-    private final String shortUrl;
-
-    private final String longUrl;
+    private String longUrl;
 
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private final LocalDateTime creationDate;
+    private LocalDateTime creationDate = LocalDateTime.now();
 
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private final LocalDateTime modificationDate;
+    private LocalDateTime modificationDate = LocalDateTime.now();
 
+    public Url(String shortUrl, String longUrl) {
+        this.shortUrl = shortUrl;
+        this.longUrl = longUrl;
+    }
 }

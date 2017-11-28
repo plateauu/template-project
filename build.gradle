@@ -41,14 +41,11 @@ dependencies {
 //	compile('com.vaadin:vaadin-spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("com.google.guava:guava:${guavaVersion}")
-    compile('org.springframework.boot:spring-boot-configuration-processor')
 
     runtime('com.h2database:h2')
     compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile("org.spockframework:spock-core:${spockFrameworkVersion}") {
-        exclude module: 'groovy-all'
-    }
+    testCompile("org.spockframework:spock-core:${spockFrameworkVersion}")
     testCompile("org.spockframework:spock-spring:${spockFrameworkVersion}")
 
 //	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')

@@ -1,27 +1,17 @@
 package tech.plateauu.shortener;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
-@EnableScheduling
 @SpringBootApplication
 public class ShortenerApplication {
 
     public static void main(String[] args) {
-        SpringApplication
-                .run(ShortenerApplication.class, args);
-
-    }
-
-    class ScheduledCommandLineRunner implements CommandLineRunner {
-
-        @Scheduled()
-        @Override
-        public void run(String... args) throws Exception {
-            System.out.println("Hello world");
-        }
+        new SpringApplicationBuilder()
+                .properties("surname", "michalak")
+                .bannerMode(Banner.Mode.CONSOLE)
+                .sources(tech.plateauu.shortener.ShortenerApplication.class)
+                .run(args);
     }
 }

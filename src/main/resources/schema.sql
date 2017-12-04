@@ -1,0 +1,7 @@
+CREATE TABLE url(
+  id IDENTITY PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  shortUrl VARCHAR2(100),
+  longUrl VARCHAR2(255),
+  creationDate TIMESTAMP,
+  modificationDate TIMESTAMP
+);

@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Url extends BaseEntity{
+public class Url extends BaseEntity {
 
     private String shortUrl;
 

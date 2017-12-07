@@ -1,20 +1,21 @@
 package tech.plateauu.shortener.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @Inheritance
 @Data
 @NoArgsConstructor
+@EqualsAndHashCode
+@ToString
 @MappedSuperclass
 class BaseEntity {
 
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     Long id;
 

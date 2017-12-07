@@ -21,13 +21,13 @@ repositories {
     mavenCentral()
 }
 
-
 ext {
     springCloudVersion = 'Dalston.SR4'
     vaadinVersion = '8.1.0'
     spockFrameworkVersion = '1.1-groovy-2.4'
     groovyVersion = '2.4.12'
     guavaVersion = '23.4-jre'
+    hibernateVersion = "5.2.4.Final"
 }
 
 dependencies {
@@ -40,6 +40,7 @@ dependencies {
 //	compile('org.springframework.boot:spring-boot-starter-security')
 //	compile('com.vaadin:vaadin-spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.hibernate:hibernate-core:5.2.4.Final")
     compile("com.google.guava:guava:${guavaVersion}")
 
     runtime('com.h2database:h2')

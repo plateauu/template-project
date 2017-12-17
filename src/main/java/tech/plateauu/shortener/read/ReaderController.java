@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tech.plateauu.shortener.model.Url;
 
+import java.util.List;
 import java.util.Set;
 
 @RequestMapping("/find")
@@ -20,7 +21,7 @@ class ReaderController {
     }
 
     @GetMapping("/all")
-    Set<Url> shortUrl() {
+    List<Url> shortUrl() {
         return reader.findAll();
     }
 

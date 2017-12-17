@@ -26,3 +26,5 @@ nbdist/
 .nb-gradle/
 
 dependencies.txt
+src/main/resources/static/
+src/main/resources/templates/
